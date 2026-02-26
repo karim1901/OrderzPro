@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.bgImg {
+    width: 100%;
+    height: 100vh; 
+    background-image: url("/backgrounds/bg2.png");
+    background-size: cover; 
+    background-position: center; 
+}
+
+
+.bgImg2{
+    width: 100%;
+    height: 100vh; 
+    background-image: url("/backgrounds/bg5.png");
+    background-size: cover; 
+    background-position: center; 
+}
+
+.bgImgMobile1{
+    width: 100%;
+    height: 100vh; 
+    background-image: url("/backgrounds/bgm1.png");
+    background-size: cover; 
+    background-position: center; 
+}
+
+
+.bgImgfooter{
+    width: 100%;
+    height: 350px; 
+    background-image: url("/backgrounds/bg3.png");
+    background-size: cover; 
+    background-position: center; 
+}
+
+
+.bgSignup {
+    width: 100%;
+    height: 100vh; 
+    background-image: url("/backgrounds/bg3.png");
+    background-size: cover; 
+    background-position: center;
+}
+
+
+.shadowSingup{
+    box-shadow: 5px 5px 10px  #00000032 , -5px -5px 10px  #00000032  ;
+}
+
+.shadowInputs{
+    box-shadow: 1px 1px 5px  #00000010 , -1px -1px 5px  #00000010  ;
+}
+
+
+.bgHomeMobile{
+    width: 100%;
+    height: 100vh; 
+    background-image: url("/backgrounds/bgm2.png");
+    background-size: cover; 
+    background-position: center;
+}
+
+
+.shadowIcons{
+    box-shadow: 1px 1px 2px  #ffffff47 , -1px -1px 2px  #ffffff47  ;
+}
+
+
+.bgHomeMobile2{
+    width: 100%;
+    height: 100vh; 
+    background-image: url("/backgrounds/bgm2.png");
+    background-size: cover; 
+    background-position: center;
+}
+
+.shadowBOX{
+    box-shadow: 1px 1px 10px  #0000002d , -1px -1px 10px  #0000002d  ;
+}
+
+
+.glass { 
+    background: rgba(255, 255, 255, 0.08); 
+    backdrop-filter: blur(20px); 
+    -webkit-backdrop-filter: blur(20px); 
+    border: 1px solid rgba(255, 255, 255, 0.15); 
+} 
+
+.containerFooter{
+    background: rgba(255, 255, 255, 0.08); 
+    backdrop-filter: blur(20px); 
+    -webkit-backdrop-filter: blur(20px); 
+    border: 1px solid #ffffff26; 
+}
+
+/* .containerFooter div{
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+} */
