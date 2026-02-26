@@ -22,7 +22,7 @@ export default function Home() {
                   <li>log in</li>
                 </ul>
 
-                <Link href={"/signin"}><button className="px-10 bg-orange-500 text-white font-semibold h-[2.5rem] rounded-md">Get Started</button></Link>
+                <Link href={"/signup"}><button className="px-10 bg-orange-500 text-white font-semibold h-[2.5rem] rounded-md">Get Started</button></Link>
               </div>
             </div>
 
@@ -33,7 +33,7 @@ export default function Home() {
 
               <h1 className="text-[1.5rem] text-white w-[25rem] ">Streamline Your E-commerce Call Center Operations </h1>
               <p className="pt-4 w-[23rem] text-[0.9rem] text-white">Manage customer support agents, confirm orders, and track deliveries with ease, Boost efficiency and calculate commissions effortlessly.</p>
-              <Link href={"/signin"}><button className="px-10 bg-orange-500 text-white font-semibold h-[2.5rem] rounded-md">Get Started</button></Link>
+              <Link href={"/signup"}><button className="px-10 bg-orange-500 text-white font-semibold h-[2.5rem] rounded-md">Get Started</button></Link>
               
 
 
@@ -70,6 +70,7 @@ export default function Home() {
           <div className="absolute bottom-[2rem] p-[2rem]  py-0  " >
             <p className="pt-4 text-[1rem] text-center text-white">Manage customer support agents, confirm orders, and track deliveries with ease, Boost efficiency and calculate commissions effortlessly.</p>
             <Link href={"/signup"}><button className="w-[15rem] ml-[calc((100%-15rem)/2)]  mt-[2rem] bg-orange-500 text-white font-semibold h-[2.5rem] rounded-md">Get Started</button></Link>
+            <Link href={"/home"}><p>home</p></Link>
           </div>
 
         </div>
