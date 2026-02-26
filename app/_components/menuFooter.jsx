@@ -6,7 +6,7 @@ import { IoMdSettings } from "react-icons/io";
 
 const MenuFooter = () => {
   return (
-    <div className='containerFooter  w-full absolute  bottom-[70px] flex text-[2.5rem] text-gray-300 '>
+    <div className='containerFooter  w-full absolute  bottom-[0px] flex text-[2.5rem] text-gray-300 '>
         <div className='p-4 w-full border-r-[1px] border-[#ffffff26] flex justify-center items-center'><ImHome3/></div>
         <div className='p-4 w-full  border-r-[1px] border-[#ffffff26] flex justify-center items-center '><FaClipboardList/></div>
         <div className='p-4 w-full  border-r-[1px] border-[#ffffff26] flex justify-center items-center '><FaUser/></div>
