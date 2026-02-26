@@ -86,7 +86,7 @@ const page = () => {
 
       </div> */}
 
-      <div className='  h-[calc(100vh-250px)] overflow-y-scroll '>
+      <div className='  max-h-[calc(100vh-310px)] overflow-y-scroll '>
         <div className="px-4 flex flex-col gap-4">
           {/* Revenue */}
           <Card title="Revenue" value="8950 DH" icon="💰" color="bg-orange-500/30" valueColor="text-orange-400" />
