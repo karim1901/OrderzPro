@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className=" select-none">
 
       {/* <img src="/backgrounds/bg2.png" alt="" className=" absolute " /> */}
 

@@ -38,58 +38,26 @@ const page = () => {
   return (
     <div className='bgHomeMobile relative max-h-screen overflow-hidden  '>
       <div>
-        <div className="p-4 flex justify-between items-center ">
+        <div className="p-4 flex justify-between items-center select-none ">
           <img src="/logo/logo.png" alt="" className="w-[13rem]" />
           <IoIosNotifications className='text-[1.8rem] bg-[#ffffff0f] text-[#d6d6e694] border-[.5px] border-white rounded-full ' />
         </div>
       </div>
-      <div className='p-4'>
+      <div className='px-4 pb-4 select-none'>
         <h1 className='text-[1.3rem] text-white font-semibold'>Welcome Ossama </h1>
       </div>
 
-      {/* <div className=' w-full h-screen absolute px-4 left-0 top-[calc(100vh/4)] '>
-        <div className=' h-[70px] rounded-full  shadowBOX  flex '>
-          <div className='bg-[#ff9900e5] rounded-l-full w-1/2 h-full flex justify-center items-center font-semibold text-[1.5rem]'>
-            <p  className='text-white'>Dashboard</p>
-          </div>
-          <div className='w-1/2 bg-[#0e114d8f] rounded-r-full h-full flex justify-center items-center font-semibold text-[1.5rem]'>
-            <p className='text-white'>Orders</p>
-          </div>
-        </div>
-      </div> */}
+      <div className='px-4 pb-4 '>
+        <select name="" id="" className='rounded-lg pl-4 outline-none bg-[#ffffff14] text-gray-300 border-[1px]  border-[#ffffff26] h-[2rem] w-full'>
+          <option value="">02/2026</option>
+          <option value="">01/2026</option>
+          <option value="">12/2025</option>
+          <option value="">11/2025</option>
+        </select>
+      </div>
 
-      {/* <div className='px-4 flex flex-col gap-4'>
+      <div className={` ${isPWA ? "max-h-[calc(100vh-290px)]" : "max-h-[calc(100vh-320px)]"}  overflow-y-scroll `}>
 
-        <div className='bg-[#ccccd776] relative shadowSingup rounded-md w-full h-[100px]'>
-          <div className='h-[.5rem] w-full bg-[#0e197845] rounded-b-md absolute bottom-0 '>
-
-          </div>
-        </div>
-
-        <div className='bg-[#ffffff76] relative shadowSingup rounded-md w-full h-[100px]'>
-          <div className='h-[.5rem] w-full bg-[#ffffff45] rounded-b-md absolute bottom-0 '>
-
-          </div>
-        </div>
-
-        <div className='bg-[#e3f5e292] relative shadowSingup rounded-md w-full h-[100px]'>
-          <div className='h-[.5rem] w-full bg-[#12780e87] rounded-b-md absolute bottom-0 '>
-
-          </div>
-        </div>
-
-        <div className='bg-[#d7cccc76] relative shadowSingup rounded-md w-full h-[100px]'>
-          <div className='h-[.5rem] w-full bg-[#780e0e45] rounded-b-md absolute bottom-0 '>
-
-          </div>
-        </div>
-
-
-
-
-      </div> */}
-
-      <div className='  max-h-[calc(100vh-290px)] overflow-y-scroll '>
         <div className="px-4 flex flex-col gap-4">
           {/* Revenue */}
           <Card title="Revenue" value="8950 DH" icon="💰" color="bg-orange-500/30" valueColor="text-orange-400" />
