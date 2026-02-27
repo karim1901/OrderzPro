@@ -49,14 +49,14 @@ const page = () => {
 
       <div className='px-4 pb-4 '>
         <select name="" id="" className='rounded-lg pl-4 outline-none bg-[#ffffff14] text-gray-300 border-[1px]  border-[#ffffff26] h-[2rem] w-full'>
-          <option value="">02/2026</option>
+          <option className='' value="">02/2026</option>
           <option value="">01/2026</option>
           <option value="">12/2025</option>
           <option value="">11/2025</option>
         </select>
       </div>
 
-      <div className={` ${isPWA ? "max-h-[calc(100vh-290px)]" : "max-h-[calc(100vh-320px)]"}  overflow-y-scroll `}>
+      <div className={` ${isPWA ? "max-h-[calc(100vh-270px)]" : "max-h-[calc(100vh-320px)]"}  overflow-y-scroll `}>
 
         <div className="px-4 flex flex-col gap-4">
           {/* Revenue */}
