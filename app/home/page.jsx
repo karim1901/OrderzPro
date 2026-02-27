@@ -36,15 +36,7 @@ const page = () => {
 
 
   return (
-    <div className='bgHomeMobile relative   '>
-      <div className='w-full h-[200px] bg-white text-black font-semibold text-[1.5rem]'>
-        {isPWA ? (
-          <h1>فاتح كتطبيق 📱</h1>
-        ) : (
-          <h1>فاتح فالمتصفح 🌍</h1>
-        )}
-      </div>
-
+    <div className='bgHomeMobile relative max-h-screen overflow-hidden  '>
       <div>
         <div className="p-4 flex justify-between items-center ">
           <img src="/logo/logo.png" alt="" className="w-[13rem]" />
@@ -97,7 +89,7 @@ const page = () => {
 
       </div> */}
 
-      <div className='  max-h-[calc(100vh-300px)] overflow-y-scroll '>
+      <div className='  max-h-[calc(100vh-290px)] overflow-y-scroll '>
         <div className="px-4 flex flex-col gap-4">
           {/* Revenue */}
           <Card title="Revenue" value="8950 DH" icon="💰" color="bg-orange-500/30" valueColor="text-orange-400" />
