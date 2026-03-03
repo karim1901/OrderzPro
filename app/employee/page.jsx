@@ -4,6 +4,7 @@ import MenuFooter from '../_components/menuFooter'
 import { IoIosNotifications } from 'react-icons/io'
 import useIsPWA from '../_components/IsPwa'
 import { BiSolidEdit } from "react-icons/bi";
+import Link from 'next/link'
 
 const page = () => {
     const isPWA = useIsPWA();
@@ -16,13 +17,20 @@ const page = () => {
                     <IoIosNotifications className='text-[1.8rem] bg-[#ffffff0f] text-[#d6d6e694] border-[.5px] border-white rounded-full ' />
                 </div>
             </div>
-            <div className='px-4 pb-4 select-none'>
+            <div className='px-4 pb-4  select-none'>
                 <h1 className='text-[1.3rem] text-white font-semibold'>Welcome Ossama </h1>
             </div>
 
-            <div className={` ${isPWA ? "max-h-[calc(100vh-270px)]" : "max-h-[calc(100vh-290px)]"} p-4 overflow-y-scroll `}>
+            <Link href={"/employee/add"}>
+                <div className='px-4 pb-4'>
+                    <button className='w-full h-[2.5rem]  text-white bg-orange-500 rounded-lg hover:bg-[#ffffff14] backdrop-filter-[blur(20px)] hover:border-[1px] hover:border-[#ffffff26] '>Add Employee</button>
+                </div>
+            </Link>
+
+            <div className={` ${isPWA ? "max-h-[calc(100vh-270px)]" : "max-h-[calc(100vh-330px)]"} px-4 pb-4 overflow-y-scroll `}>
 
                 <div className='flex flex-col gap-4'>
+
                     <div className='w-full p-4 h-[100px] glass rounded-xl flex '>
                         <div className=''>
                             <img src="/icons/icon2.png" alt="" className='w-[4rem]' />
@@ -170,10 +178,6 @@ const page = () => {
                 </div>
 
             </div>
-
-
-
-
 
             <MenuFooter />
 

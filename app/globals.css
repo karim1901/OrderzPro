@@ -4,98 +4,175 @@
 
 
 
+.loader {
+    animation: rotate 1s infinite;
+    height: 50px;
+    width: 50px;
+}
+
+.loader:before,
+.loader:after {
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 20px;
+    width: 20px;
+}
+
+.loader:before {
+    animation: ball1 1s infinite;
+    background-color: #fff;
+    box-shadow: 30px 0 0 #ff9900;
+    margin-bottom: 10px;
+}
+
+.loader:after {
+    animation: ball2 1s infinite;
+    background-color: #ff9900;
+    box-shadow: 30px 0 0 #fff;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) scale(0.8)
+    }
+
+    50% {
+        transform: rotate(360deg) scale(1.2)
+    }
+
+    100% {
+        transform: rotate(720deg) scale(0.8)
+    }
+}
+
+@keyframes ball1 {
+    0% {
+        box-shadow: 30px 0 0 #ff9900;
+    }
+
+    50% {
+        box-shadow: 0 0 0 #ff9900;
+        margin-bottom: 0;
+        transform: translate(15px, 15px);
+    }
+
+    100% {
+        box-shadow: 30px 0 0 #ff9900;
+        margin-bottom: 10px;
+    }
+}
+
+@keyframes ball2 {
+    0% {
+        box-shadow: 30px 0 0 #fff;
+    }
+
+    50% {
+        box-shadow: 0 0 0 #fff;
+        margin-top: -20px;
+        transform: translate(15px, 15px);
+    }
+
+    100% {
+        box-shadow: 30px 0 0 #fff;
+        margin-top: 0;
+    }
+}
+
+
 .bgImg {
     width: 100%;
-    height: 100vh; 
+    height: 100vh;
     background-image: url("/backgrounds/bg2.png");
-    background-size: cover; 
-    background-position: center; 
+    background-size: cover;
+    background-position: center;
 }
 
 
-.bgImg2{
+.bgImg2 {
     width: 100%;
-    height: 100vh; 
+    height: 100vh;
     background-image: url("/backgrounds/bg5.png");
-    background-size: cover; 
-    background-position: center; 
+    background-size: cover;
+    background-position: center;
 }
 
-.bgImgMobile1{
+.bgImgMobile1 {
     width: 100%;
-    height: 100vh; 
+    height: 100vh;
     background-image: url("/backgrounds/bgm1.png");
-    background-size: cover; 
-    background-position: center; 
+    background-size: cover;
+    background-position: center;
 }
 
 
-.bgImgfooter{
+.bgImgfooter {
     width: 100%;
-    height: 350px; 
+    height: 350px;
     background-image: url("/backgrounds/bg3.png");
-    background-size: cover; 
-    background-position: center; 
+    background-size: cover;
+    background-position: center;
 }
 
 
 .bgSignup {
     width: 100%;
-    height: 100vh; 
+    height: 100vh;
     background-image: url("/backgrounds/bg3.png");
-    background-size: cover; 
+    background-size: cover;
     background-position: center;
 }
 
 
-.shadowSingup{
-    box-shadow: 5px 5px 10px  #00000032 , -5px -5px 10px  #00000032  ;
+.shadowSingup {
+    box-shadow: 5px 5px 10px #00000032, -5px -5px 10px #00000032;
 }
 
-.shadowInputs{
-    box-shadow: 1px 1px 5px  #00000010 , -1px -1px 5px  #00000010  ;
+.shadowInputs {
+    box-shadow: 1px 1px 5px #00000010, -1px -1px 5px #00000010;
 }
 
 
-.bgHomeMobile{
+.bgHomeMobile {
     width: 100%;
-    height: 100vh; 
+    height: 100vh;
     background-image: url("/backgrounds/bgm2.png");
-    background-size: cover; 
+    background-size: cover;
     background-position: center;
 }
 
 
-.shadowIcons{
-    box-shadow: 1px 1px 2px  #ffffff47 , -1px -1px 2px  #ffffff47  ;
+.shadowIcons {
+    box-shadow: 1px 1px 2px #ffffff47, -1px -1px 2px #ffffff47;
 }
 
 
-.bgHomeMobile2{
+.bgHomeMobile2 {
     width: 100%;
-    height: 100vh; 
+    height: 100vh;
     background-image: url("/backgrounds/bgm2.png");
-    background-size: cover; 
+    background-size: cover;
     background-position: center;
 }
 
-.shadowBOX{
-    box-shadow: 1px 1px 10px  #0000002d , -1px -1px 10px  #0000002d  ;
+.shadowBOX {
+    box-shadow: 1px 1px 10px #0000002d, -1px -1px 10px #0000002d;
 }
 
 
-.glass { 
-    background: #ffffff14; 
-    backdrop-filter: blur(20px); 
-    -webkit-backdrop-filter: blur(20px); 
-    border: 1px solid #ffffff26; 
-} 
+.glass {
+    background: #ffffff14;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid #ffffff26;
+}
 
-.containerFooter{
-    background: rgba(255, 255, 255, 0.08); 
-    backdrop-filter: blur(20px); 
-    -webkit-backdrop-filter: blur(20px); 
-    border: 1px solid #ffffff26; 
+.containerFooter {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid #ffffff26;
 }
 
 /* .containerFooter div{

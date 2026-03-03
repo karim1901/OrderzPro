@@ -18,7 +18,7 @@ const MenuFooter = () => {
         </div>
       </Link>
 
-      <Link href={"orders"} className='w-full'>
+      <Link href={"/orders"} className='w-full'>
         <div className='p-2 w-full  border-r-[1px] border-[#ffffff26] flex flex-col  justify-center items-center '>
           <FaClipboardList />
           <p className='text-[.8rem]'>orders</p>
