@@ -30,7 +30,7 @@ export async function POST(req) {
 
 
 
-        sendVerificationEmail(email, token)
+        await sendVerificationEmail(email, token)
 
         return NextResponse.json("seccessfully")
 
