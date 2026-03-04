@@ -30,7 +30,7 @@ export async function  POST(req) {
 
         sendVerificationEmail(email ,token )
 
-        return NextResponse.json("succe")
+        return NextResponse.json("seccessfully")
 
     } catch (error) {
         console.log("error server :" ,error.message )
@@ -61,7 +61,7 @@ export async function sendVerificationEmail(email, token) {
     },
   });
 
-  const verificationLink = `http://192.168.11.108:3000/api/verify?token=${token}`;
+  const verificationLink = `https://orderzpro.vercel.app/verify?token=${token}`;
 
   await transporter.sendMail({
     from: process.env.EMAIL_USER,

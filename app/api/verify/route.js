@@ -1,9 +1,22 @@
 import User from "@/models/user";
+import { connectDB } from "@/utils/connectDB";
+
 import { NextResponse } from "next/server";
 
+connectDB()
+
 export async function GET(req) {
+
+
   const { searchParams } = new URL(req.url);
   const token = searchParams.get("token");
+
+  if (!token) {
+    return NextResponse.json(
+      { message: "Token is required" },
+      { status: 400 }
+    );
+  }
 
   const user = await User.findOne({
     verificationToken: token,
@@ -11,16 +24,19 @@ export async function GET(req) {
   });
 
   if (!user) {
-    // إذا التوكن غير صالح، ممكن توجه المستخدم لصفحة error
-    return NextResponse.redirect(new URL("/en/signup", req.url));
+    return NextResponse.json(
+      { message: "Invalid or expired token" },
+      { status: 400 }
+    );
   }
 
-  // تأكيد الحساب
   user.isVerified = true;
   user.verificationToken = undefined;
   user.verificationTokenExpires = undefined;
   await user.save();
 
-  // توجيه المستخدم لصفحة login أو dashboard
-  return NextResponse.redirect(new URL("/en/login", req.url));
+  return NextResponse.json(
+    { message: "Email verified successfully" },
+    { status: 200 }
+  );
 }
