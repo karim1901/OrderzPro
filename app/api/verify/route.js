@@ -12,7 +12,7 @@ export async function GET(req) {
 
   if (!user) {
     // إذا التوكن غير صالح، ممكن توجه المستخدم لصفحة error
-    return NextResponse.redirect("/verify-error");
+    return NextResponse.redirect(new URL("/en/signup", req.url));
   }
 
   // تأكيد الحساب
@@ -22,5 +22,5 @@ export async function GET(req) {
   await user.save();
 
   // توجيه المستخدم لصفحة login أو dashboard
-  return NextResponse.redirect("/login");
+  return NextResponse.redirect(new URL("/en/login", req.url));
 }

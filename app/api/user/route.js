@@ -61,7 +61,7 @@ export async function sendVerificationEmail(email, token) {
     },
   });
 
-  const verificationLink = `http://orderzpro.vercel.app/api/verify?token=${token}`;
+  const verificationLink = `http://192.168.11.108:3000/api/verify?token=${token}`;
 
   await transporter.sendMail({
     from: process.env.EMAIL_USER,
