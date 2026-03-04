@@ -10,7 +10,7 @@ const MenuFooter = () => {
   const isPWA = useIsPWA();
 
   return (
-    <div className={`containerFooter  w-full absolute select-none ${isPWA ? "bottom-[0px]" : "bottom-[70px]"}  flex text-[1.4rem] text-gray-300 `}>
+    <div className={`containerFooter  w-full fixed select-none ${isPWA ? "bottom-[0px]" : "bottom-[0px]"}  flex text-[1.4rem] text-gray-300 `}>
       <Link href={"/home"} className='w-full'>
         <div className='p-2 w-full border-r-[1px] border-[#ffffff26] flex flex-col  justify-center items-center '>
           <ImHome3 />

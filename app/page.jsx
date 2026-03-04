@@ -53,7 +53,7 @@ export default function Home() {
       </div>
 
       <div className="sm:hidden">
-        <div className="bgImgMobile1">
+        <div className="bgHomeMobile">
           <div className="p-4 flex justify-center">
             <img src="/logo/logo.png" alt="" className="w-[13rem]" />
           </div>

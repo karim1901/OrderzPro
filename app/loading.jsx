@@ -13,7 +13,7 @@ const loading = () => {
                 </div>
             </div>
             <div className=' flex fixed top-0 left-0  justify-center items-center h-full w-full '>
-                <span class="loader"></span>
+                <span className="loader"></span>
             </div>
             
 
