@@ -17,15 +17,18 @@ export async function  POST(req) {
 
         const token = crypto.randomBytes(32).toString("hex");
 
-        const user = await User.create({
-          fullname,
-          username,
-          email,
-          password,
-          verificationToken: token,
-          verificationTokenExpires: Date.now() + 1000 * 60 * 60, // 1 hour
-        });
+        // const user = await User.create({
+        //   fullname,
+        //   username,
+        //   email,
+        //   password,
+        //   verificationToken: token,
+        //   verificationTokenExpires: Date.now() + 1000 * 60 * 60, // 1 hour
+        // });
 
+
+        console.log(email , token)
+        
 
         sendVerificationEmail(email ,token )
 
@@ -60,7 +63,7 @@ export async function sendVerificationEmail(email, token) {
     },
   });
 
-  const verificationLink = `http://orderzpro.vercel.app/verify?token=${token}`;
+  const verificationLink = `http://orderzpro.vercel.app/api/verify?token=${token}`;
 
   await transporter.sendMail({
     from: process.env.EMAIL_USER,
