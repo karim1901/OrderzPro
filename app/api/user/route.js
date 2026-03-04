@@ -7,7 +7,7 @@ import crypto from "crypto";
 connectDB()
 
 
-export async function  POST(req) {
+export async function POST(req) {
     try {
 
         // const adduser = await User.create(data)
@@ -18,23 +18,25 @@ export async function  POST(req) {
         const token = crypto.randomBytes(32).toString("hex");
 
         const user = await User.create({
-          fullname,
-          username,
-          email,
-          password,
-          verificationToken: token,
-          verificationTokenExpires: Date.now() + 1000 * 60 * 60, // 1 hour
+            fullname,
+            username,
+            email,
+            password,
+            verificationToken: token,
+            verificationTokenExpires: Date.now() + 1000 * 60 * 60, // 1 hour
         });
 
-        
+        console.log("EMAIL_USER1:", process.env.EMAIL_USER);
 
-        sendVerificationEmail(email ,token )
+
+
+        sendVerificationEmail(email, token)
 
         return NextResponse.json("seccessfully")
 
     } catch (error) {
-        console.log("error server :" ,error.message )
-        return NextResponse.json({errorMessage:error.message},{status:500})
+        console.log("error server :", error.message)
+        return NextResponse.json({ errorMessage: error.message }, { status: 500 })
     }
 }
 
@@ -53,21 +55,24 @@ export async function  POST(req) {
 
 export async function sendVerificationEmail(email, token) {
 
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS,
-    },
-  });
+    console.log("EMAIL_USER2:", process.env.EMAIL_USER);
 
-  const verificationLink = `https://orderzpro.vercel.app/verify?token=${token}`;
 
-  await transporter.sendMail({
-    from: process.env.EMAIL_USER,
-    to: email,
-    subject: "Verify your email",
-    html: `
+    const transporter = nodemailer.createTransport({
+        service: "gmail",
+        auth: {
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS,
+        },
+    });
+
+    const verificationLink = `https://orderzpro.vercel.app/verify?token=${token}`;
+
+    await transporter.sendMail({
+        from: process.env.EMAIL_USER,
+        to: email,
+        subject: "Verify your email",
+        html: `
     <div style="margin:0;padding:0;background-color:#f4f6f8;font-family:Arial,sans-serif;">
       <table align="center" width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;margin:auto;background:#ffffff;border-radius:8px;overflow:hidden;">
         
@@ -108,5 +113,5 @@ export async function sendVerificationEmail(email, token) {
       </table>
     </div>
   `
-  });
+    });
 }
