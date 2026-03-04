@@ -26,7 +26,7 @@ export async function POST(req) {
             verificationTokenExpires: Date.now() + 1000 * 60 * 60, // 1 hour
         });
 
-        console.log("EMAIL_USER1:", process.env.EMAIL_USER);
+
 
 
 
@@ -55,7 +55,7 @@ export async function POST(req) {
 
 export async function sendVerificationEmail(email, token) {
 
-    console.log("EMAIL_USER2:", process.env.EMAIL_USER);
+
 
 
     const transporter = nodemailer.createTransport({
@@ -67,6 +67,8 @@ export async function sendVerificationEmail(email, token) {
     });
 
     const verificationLink = `https://orderzpro.vercel.app/verify?token=${token}`;
+
+    console.log("API CALLED");
 
     await transporter.sendMail({
         from: process.env.EMAIL_USER,
@@ -113,5 +115,11 @@ export async function sendVerificationEmail(email, token) {
       </table>
     </div>
   `
-    });
+
+  
+    })
+    
+    console.log("SENDING EMAIL...");
+    
+    ;
 }
