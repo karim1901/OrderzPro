@@ -1,10 +1,11 @@
 'use client'
 import React from 'react'
-import MenuFooter from '../_components/menuFooter'
+
 import { IoIosNotifications } from 'react-icons/io'
 import useIsPWA from '../_components/IsPwa'
 import { BiSolidEdit } from "react-icons/bi";
 import Link from 'next/link'
+import MenuFooter from '../_components/menuFooter';
 
 const page = () => {
     const isPWA = useIsPWA();
@@ -21,7 +22,7 @@ const page = () => {
                 <h1 className='text-[1.3rem] text-white font-semibold'>Welcome Ossama </h1>
             </div>
 
-            <Link href={"/employee/add"}>
+            <Link href={"/en/employee/add"}>
                 <div className='px-4 pb-4'>
                     <button className='w-full h-[2.5rem]  text-white bg-orange-500 rounded-lg hover:bg-[#ffffff14] backdrop-filter-[blur(20px)] hover:border-[1px] hover:border-[#ffffff26] '>Add Employee</button>
                 </div>

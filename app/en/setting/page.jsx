@@ -27,10 +27,11 @@ const page = () => {
 
                 <div className="px-4 flex flex-col gap-4 ">
                     <ul className=' text-white mt-11 flex flex-col gap-1 '>
-                        <Link href={"/setting/payment"}><li className='glass px-4 py-2 rounded-md hover:bg-orange-400'>Payment</li></Link>
-                        <Link href={"/setting/contact"}><li className='glass px-4 py-2 rounded-md hover:bg-orange-400'>Contact</li></Link>
-                        <Link href={"/setting/Language"}><li className='glass px-4 py-2 rounded-md hover:bg-orange-400'>Language</li></Link>
-                        <Link href={"/setting/Language"}><li className=' px-4 py-2 rounded-md flex items-center gap-2 hover:bg-white hover:text-green-500 text-white bg-green-500'>
+                        <Link href={"setting/Acount"}><li className='glass px-4 py-2 rounded-md hover:bg-orange-400'>My Acounte</li></Link>
+                        <Link href={"setting/payment"}><li className='glass px-4 py-2 rounded-md hover:bg-orange-400'>Payment</li></Link>
+                        <Link href={"setting/contact"}><li className='glass px-4 py-2 rounded-md hover:bg-orange-400'>Contact</li></Link>
+                        <Link href={"setting/Language"}><li className='glass px-4 py-2 rounded-md hover:bg-orange-400'>Language</li></Link>
+                        <Link href={"setting/Language"}><li className=' px-4 py-2 rounded-md flex items-center gap-2 hover:bg-white hover:text-green-500 text-white bg-green-500'>
                             WhatsApp
                             <FaWhatsapp/>
                         </li></Link>

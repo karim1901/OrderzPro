@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { IoIosNotifications } from 'react-icons/io'
-import MenuFooter from './_components/menuFooter'
+import MenuFooter from './en/_components/menuFooter'
 
 const loading = () => {
     return (

@@ -1,6 +1,6 @@
 'use client'
-import useIsPWA from '@/app/_components/IsPwa'
-import MenuFooter from '@/app/_components/menuFooter'
+import useIsPWA from '@/app/en/_components/IsPwa'
+import MenuFooter from '@/app/en/_components/menuFooter'
 import React from 'react'
 import { IoIosNotifications } from 'react-icons/io'
 

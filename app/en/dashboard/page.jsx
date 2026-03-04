@@ -47,7 +47,33 @@ const page = () => {
         <h1 className='text-[1.3rem] text-white font-semibold'>Welcome Ossama </h1>
       </div>
 
-      <div className='px-4 pb-4 '>
+
+      <div className=' w-full h-[400px]  '>
+
+        <h1 className='text-white font-semibold text-center text-[1.2rem] p-4'>Delivery company</h1>
+
+        <div className='flex justify-center'>
+
+          <div className='flex gap-4 p-4 bg-yellow-400 max-w-fit rounded-md'>
+            <div className='flex gap-1'>
+              <p className='font-semibold text-white'>Ozon</p>
+              <p className='font-semibold text-red-700'>Express</p>
+            </div>
+            <input type="radio" checked />
+          </div>
+        </div>
+
+        <div className='flex flex-col gap-3 mt-4 px-4'>
+          <input type="text" placeholder='ID' name='userName' className='w-full shadowInputs h-[2.5rem] pl-4 rounded-md  glass text-white outline-none' />
+          <input type="text" placeholder='API Key  xxxxx-xxxxx-xxxxx-xxxxx-xxxxx' name='password' className='w-full shadowInputs h-[2.5rem] pl-4 rounded-md  glass text-white outline-none' />
+          <button className='bg-orange-500 text-white h-[2.5rem] rounded-md  hover:bg-[#ffffff14] hover:border-[1px] hover:border-[#ffffff26] '>Send</button>
+        </div>
+
+      </div>
+
+
+
+      <div className='px-4 pb-4 hidden'>
         <select name="" id="" className='rounded-lg pl-4 outline-none bg-[#ffffff14] text-gray-300 border-[1px]  border-[#ffffff26] h-[2rem] w-full'>
           <option className='' value="">02/2026</option>
           <option value="">01/2026</option>
@@ -56,7 +82,7 @@ const page = () => {
         </select>
       </div>
 
-      <div className={` ${isPWA ? "max-h-[calc(100vh-270px)]" : "max-h-[calc(100vh-320px)]"}  overflow-y-scroll `}>
+      <div className={` ${isPWA ? "max-h-[calc(100vh-270px)]" : "max-h-[calc(100vh-320px)]"}  overflow-y-scroll hidden `}>
 
         <div className="px-4 flex flex-col gap-4">
           {/* Revenue */}
