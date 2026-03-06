@@ -28,7 +28,7 @@ const page = () => {
 
             localStorage.removeItem("user");
 
-            router.push("/en/login");
+            router.push("login");
 
         } catch (error) {
             toast.error("logout error")
