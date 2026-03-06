@@ -1,11 +1,13 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import { IoIosNotifications } from 'react-icons/io'
-import useIsPWA from '../_components/IsPwa';
-import MenuFooter from '../_components/menuFooter';
+
+
 import Loading from '@/app/loading';
 import { usePathname, useRouter } from 'next/navigation';
 import axios from 'axios';
+import MenuFooter from '../../_components/menuFooter';
+import useIsPWA from '../../_components/IsPwa';
 
 const page = () => {
     const isPWA = useIsPWA();
