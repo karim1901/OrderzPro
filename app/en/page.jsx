@@ -49,6 +49,7 @@ export default function Home() {
 
         <div className="bgImg2 mt-[2rem]">
 
+
         </div>
       </div>
 
