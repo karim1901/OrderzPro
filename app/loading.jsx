@@ -3,7 +3,7 @@ import React from 'react'
 import { IoIosNotifications } from 'react-icons/io'
 import MenuFooter from './en/_components/menuFooter'
 
-const loading = () => {
+const Loading = () => {
     return (
         <div className='bgHomeMobile h-screen w-full  fixed'>
             <div>
@@ -22,4 +22,4 @@ const loading = () => {
     )
 }
 
-export default loading
+export default Loading

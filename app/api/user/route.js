@@ -3,6 +3,7 @@ import { connectDB } from "@/utils/connectDB";
 import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
 import crypto from "crypto";
+import bcrypt from "bcryptjs";
 
 connectDB()
 
@@ -10,9 +11,10 @@ connectDB()
 export async function POST(req) {
     try {
 
-        // const adduser = await User.create(data)
 
         const { fullname, username, email, password } = await req.json();
+
+        const hashedPassword = await bcrypt.hash(password, 10);
 
 
         const token = crypto.randomBytes(32).toString("hex");
@@ -21,13 +23,10 @@ export async function POST(req) {
             fullname,
             username,
             email,
-            password,
+            password:hashedPassword,
             verificationToken: token,
             verificationTokenExpires: Date.now() + 1000 * 60 * 60, // 1 hour
         });
-
-
-
 
 
         await sendVerificationEmail(email, token)

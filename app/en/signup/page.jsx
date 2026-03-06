@@ -1,6 +1,7 @@
 'use client'
 import axios from 'axios'
 import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 import toast from 'react-hot-toast'
 
@@ -13,6 +14,10 @@ const page = () => {
         password: "",
         confirmpassword: "",
     })
+
+    const router = useRouter()
+
+
 
 
 
@@ -27,12 +32,60 @@ const page = () => {
 
             const res = await axios.post("/api/user", user)
 
-            toast.success(" seccessfully .")
+            toast.success("A verification message has been sent to your email.")
+
+            setUser({
+                fullname: "",
+                username: "",
+                email: "",
+                password: "",
+                confirmpassword: "",
+            })
 
         } catch (error) {
             toast.error("error created field .")
 
             console.log("error in signup", error.message)
+        }
+
+
+    }
+
+
+    const [loading, setLoading] = useState(false)
+    const pathname = usePathname()
+
+
+
+    useEffect(() => { veriryTokenGetUser() }, [])
+
+
+    const veriryTokenGetUser = async () => {
+
+        const path = pathname.split("/")[2]
+
+
+        try {
+
+            const res = await axios.get("/api/me")
+
+            console.log("data user", res.data)
+            localStorage.setItem("user", JSON.stringify(res.data.user));
+            router.push("dashboard")
+
+            setLoading(true)
+
+
+        } catch (error) {
+
+
+            localStorage.removeItem("user")
+
+            if (path == "dashboard" || path == "employee" || path == "orders" || path == "setting") {
+                router.push("login")
+            }
+
+            console.log("verify token error", error.message)
         }
 
 

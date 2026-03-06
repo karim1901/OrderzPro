@@ -21,21 +21,21 @@
 
     "screenshots": [
         {
-          "src": "/screen/screen1.png",
+          "src": "/screen/screen1.jpeg",
           "sizes": "1080x1920",
           "type": "image/png",
           "form_factor": "narrow",
           "label": "Home Screen"
         },
         {
-            "src": "/screen/screen2.png",
+            "src": "/screen/screen2.jpeg",
             "sizes": "1080x1920",
             "type": "image/png",
             "form_factor": "narrow",
             "label": "Home Screen"
         },
         {
-            "src": "/screen/screen3.png",
+            "src": "/screen/screen3.jpeg",
             "sizes": "1080x1920",
             "type": "image/png",
             "form_factor": "narrow",
