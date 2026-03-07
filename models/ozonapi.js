@@ -6,12 +6,12 @@ const userSchema = new Schema({
 
     id :{ 
         type:String,
-        require:true
+        required: true
     },
 
     apikey :{ 
         type:String,
-        require:true
+        required: true
     },
     
     user: { // ← هذا هو المرجع الجديد
@@ -22,6 +22,6 @@ const userSchema = new Schema({
 
 }, { timestamps: true });
 
-const User = mongoose.models.user || mongoose.model("user", userSchema);
+const OzonApi = mongoose.models.OzonApi || mongoose.model("OzonApi", userSchema);
 
-export default User;
+export default OzonApi;

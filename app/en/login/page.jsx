@@ -23,7 +23,14 @@ const page = () => {
 
             // console.log(res.data)
 
+            if(!res.data.user.isVerified){
+                toast.success("you neet verify your email !")
+                return
+            }
+
+
             localStorage.setItem("user", JSON.stringify(res.data.user));
+
 
             toast.success("log in successfully")
 

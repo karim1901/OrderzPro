@@ -34,8 +34,7 @@ const page = () => {
 
 
         } catch (error) {
-
-
+            
             localStorage.removeItem("user")
 
             if (path == "dashboard" || path == "employee" || path == "orders" || path == "setting") {
