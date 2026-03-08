@@ -176,7 +176,7 @@ const page = () => {
               <Card title="Revenue" value="8950 DH" icon="💰" color="bg-orange-500/30" valueColor="text-orange-400" />
 
               {/* New Orders */}
-              <Card title="Total Orders" value="206" icon="📦" color="bg-blue-500/30" />
+              <Card title="Total Orders" value="206" icon="📦" color="bg-blue-500/30" valueColor="text-yellow-500" />
               {/* Delivered */}
 
               <Card title="Orders in Progress" value="40" icon="⏳" color="bg-blue-500/30" valueColor="text-gray-300" />

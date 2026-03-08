@@ -178,3 +178,11 @@
 /* .containerFooter div{
     border-right: 1px solid rgba(255, 255, 255, 0.15);
 } */
+
+
+.glass2 {
+    background: #0000008e;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid #ffffff26;
+}

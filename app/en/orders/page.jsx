@@ -74,12 +74,12 @@ const page = () => {
                     </select>
                 </div>
 
-                <div className={` ${isPWA ? "max-h-[calc(100vh-270px)]" : "max-h-[calc(100vh-320px)]"}  overflow-y-scroll `}>
+                <div className={` ${isPWA ? "max-h-[calc(100vh-270px)]" : "max-h-[calc(100vh-330px)]"}  overflow-y-scroll `}>
 
                     <div className="px-4 flex flex-col gap-4">
 
 
-                        <div className='w-full bg-white rounded-md p-4 border-[1px] border-orange-300 glass text-white '>
+                        <div className='w-full bg-white rounded-md p-4 border-[1px] border-orange-300 glass2 text-white '>
                             <table>
                                 <thead>
                                     <tr>
@@ -139,7 +139,7 @@ const page = () => {
 
                         </div>
 
-                        <div className='w-full bg-white rounded-md p-4 border-[1px] border-orange-300 glass text-white '>
+                        <div className='w-full bg-white rounded-md p-4 border-[1px] border-orange-300 glass2 text-white '>
                             <table>
                                 <thead>
                                     <tr>
@@ -199,7 +199,7 @@ const page = () => {
 
                         </div>
 
-                        <div className='w-full bg-white rounded-md p-4 border-[1px] border-orange-300 glass text-white '>
+                        <div className='w-full bg-white rounded-md p-4 border-[1px] border-orange-300 glass2 text-white '>
                             <table>
                                 <thead>
                                     <tr>
@@ -259,7 +259,7 @@ const page = () => {
 
                         </div>
 
-                        <div className='w-full bg-white rounded-md p-4 border-[1px] border-orange-300 glass text-white '>
+                        <div className='w-full bg-white rounded-md p-4 border-[1px] border-orange-300 glass2 text-white '>
                             <table>
                                 <thead>
                                     <tr>

@@ -20,6 +20,7 @@ export const UserProvider = ({ children }) => {
 
 
 
+
     const veriryTokenGetUser = async () => {
 
         const path = pathname.split("/")[2]
@@ -64,6 +65,12 @@ export const UserProvider = ({ children }) => {
     const getEmployees = async () => {
         try {
 
+            
+
+            const res = await axios.get(`/api/employee/getEmployees/${user?._id}`)
+            setEmployees(res.data)
+
+            console.log("employees : " ,res.data)
 
 
         } catch (error) {
@@ -72,9 +79,12 @@ export const UserProvider = ({ children }) => {
         }
     }
 
-    useEffect(() => {
+    useEffect(() => { 
+        if(user == null){
+            return
+        }
         getEmployees()
-    }, [])
+    }, [user])
 
 
 
@@ -82,7 +92,7 @@ export const UserProvider = ({ children }) => {
 
 
 
-    return <UserContext.Provider value={{ loading, veriryTokenGetUser, user }}>
+    return <UserContext.Provider value={{ loading, veriryTokenGetUser, user  ,getEmployees ,employees, setEmployees}}>
         {children}
     </UserContext.Provider>
 }

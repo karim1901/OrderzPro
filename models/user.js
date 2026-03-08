@@ -45,6 +45,10 @@ const userSchema = new Schema({
     }
     ,
 
+    DeliveryCompany :{
+        type:String
+    },
+
     isApi: {
         type: Boolean,
         default: false
