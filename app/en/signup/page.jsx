@@ -13,6 +13,7 @@ const page = () => {
         email: "",
         password: "",
         confirmpassword: "",
+        role: "seller"
     })
 
     const router = useRouter()
@@ -40,6 +41,8 @@ const page = () => {
                 email: "",
                 password: "",
                 confirmpassword: "",
+                role: "seller"
+
             })
 
         } catch (error) {

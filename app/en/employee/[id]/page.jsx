@@ -56,7 +56,7 @@ const page = () => {
 
                 <div className={` ${isPWA ? "max-h-[calc(100vh-270px)]" : "max-h-[calc(100vh-290px)]"} px-4 pb-4  overflow-y-scroll `}>
 
-                    <div className='w-full  glass2  rounded-xl flex flex-col items-center p-4 pt-8 '>
+                    <div className='w-full  glass2 backdrop-blur-xl  rounded-xl flex flex-col items-center p-4 pt-8 '>
                         <div className=''>
                             <img src={`/icons/${"hi" == "male" ? "icon2.png" : "iconGirl.png"}`} alt="" className='w-[6rem]' />
                         </div>
@@ -71,7 +71,7 @@ const page = () => {
 
                     </div>
 
-                    <div className='w-full text-[0.8rem] glass rounded-xl items-center p-4 mt-4 '>
+                    <div className='w-full text-[0.8rem] glass backdrop-blur-xl rounded-xl items-center p-4 mt-4 '>
                         <table>
                             <tbody className='text-white'>
                                 <tr>
@@ -99,8 +99,8 @@ const page = () => {
                     </div>
 
                     <div className='flex flex-col gap-4 mt-4'>
-                        <input type="text" className='glass w-full rounded-md h-[2.5rem] pl-4 outline-none text-white' placeholder='Password' onChange={({ target }) => { setEmployee({ ...employee, [target.name]: target.value }) }} value={employee.password} name="password" />
-                        <input type="number" className='glass w-full rounded-md h-[2.5rem] pl-4 outline-none text-white' placeholder='Commission per delivery' onChange={({ target }) => { setEmployee({ ...employee, [target.name]: target.value >= 0 && target.value }) }} value={employee.commission >= 0 ? employee.commission : 10} name="commission" />
+                        <input type="text" className='glass backdrop-blur-xl w-full rounded-md h-[2.5rem] pl-4 outline-none text-white' placeholder='Password' onChange={({ target }) => { setEmployee({ ...employee, [target.name]: target.value }) }} value={employee.password} name="password" />
+                        <input type="number" className='glass backdrop-blur-xl w-full rounded-md h-[2.5rem] pl-4 outline-none text-white' placeholder='Commission per delivery' onChange={({ target }) => { setEmployee({ ...employee, [target.name]: target.value >= 0 && target.value }) }} value={employee.commission >= 0 ? employee.commission : 10} name="commission" />
 
                         <div className='flex justify-center gap-11 '>
 

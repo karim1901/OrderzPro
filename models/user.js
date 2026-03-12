@@ -52,6 +52,10 @@ const userSchema = new Schema({
     isApi: {
         type: Boolean,
         default: false
+    },
+    role:{
+        type:String,
+        require:true
     }
 
 

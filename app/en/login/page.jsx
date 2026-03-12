@@ -23,10 +23,15 @@ const page = () => {
 
             // console.log(res.data)
 
-            if(!res.data.user.isVerified){
-                toast.success("you neet verify your email !")
-                return
+            if(res.data.user.role == "seller" ){
+                if(!res.data.user.isVerified){
+                    toast.success("you neet verify your email !")
+                    return
+                }
             }
+
+
+
 
 
             localStorage.setItem("user", JSON.stringify(res.data.user));
@@ -34,7 +39,12 @@ const page = () => {
 
             toast.success("log in successfully")
 
-            router.push("/en/dashboard");
+
+            if(res.data.user.role == "seller"){
+                router.push("/en/dashboard");
+            }if(res.data.user.role == "employee"){
+                router.push("/en/emp/dashboard");
+            }
 
 
         } catch (error) {
@@ -64,7 +74,20 @@ const page = () => {
 
             console.log("data user", res.data)
             localStorage.setItem("user", JSON.stringify(res.data.user));
+
+
+            
             router.push("dashboard")
+
+            if(res.data.user.role == "seller"){
+                router.push("dashboard")
+            }
+
+
+            if(res.data.user.role == "employee"){
+
+                router.push("/en/emp/dashboard")
+            }
 
             setLoading(true)
 

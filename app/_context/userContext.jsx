@@ -18,9 +18,6 @@ export const UserProvider = ({ children }) => {
     const pathname = usePathname()
 
 
-
-
-
     const veriryTokenGetUser = async () => {
 
         const path = pathname.split("/")[2]
@@ -32,22 +29,34 @@ export const UserProvider = ({ children }) => {
             setLoading(true)
 
             console.log("data user", res.data)
-            localStorage.setItem("user", JSON.stringify(res.data.user));
+
+            localStorage.setItem("user", JSON.stringify(res.data.user))
 
             setUser(res.data.user)
 
 
-        } catch (error) {
-
-
-            localStorage.removeItem("user")
-
-            if (path == "dashboard" || path == "employee" || path == "orders" || path == "setting") {
-                router.push("login")
+            if(res.data.user.role == "seller"){
+                if (path == "emp" ) {
+                    router.push("/en/login")
+                }
             }
 
 
+            if(res.data.user.role == "employee"){
 
+                if (path == "dashboard" || path == "employee" || path == "orders" || path == "setting" ) {
+                    router.push("/en/login")
+                }
+            }
+
+
+        } catch (error) {
+
+            localStorage.removeItem("user")
+
+            if (path == "dashboard" || path == "employee" || path == "orders" || path == "setting" || path == "emp") {
+                router.push("/en/login")
+            }
 
             console.log("verify token error", error.message)
         }

@@ -53,7 +53,7 @@ const page = () => {
 
                         {
                             employees?.map(employee =>{
-                                return <div className='w-full p-4 h-[100px] glass2 rounded-xl flex ' onClick={()=>{router.push(`/en/employee/${"sdbcjhdscs7832723"}`)}}>
+                                return <div className='w-full p-4 h-[100px] glass2 backdrop-blur-xl rounded-xl flex ' onClick={()=>{router.push(`/en/employee/${"sdbcjhdscs7832723"}`)}}>
                                 <div className=''>
                                     <img src={`/icons/${ employee.gender == "male" ? "icon2.png" : "iconGirl.png"}`} alt="" className='w-[4rem]' />
                                 </div>

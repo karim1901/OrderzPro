@@ -57,34 +57,6 @@ const page = () => {
   }, [])
 
 
-  const veriryTokenGetUse = async () => {
-
-    const path = pathname.split("/")[2]
-
-
-    try {
-
-      const res = await axios.get("/api/me")
-
-      console.log("data user", res.data)
-      localStorage.setItem("user", JSON.stringify(res.data.user));
-      // setLoading(true)
-
-
-    } catch (error) {
-
-
-      localStorage.removeItem("user")
-
-      if (path == "dashboard" || path == "employee" || path == "orders" || path == "setting") {
-        router.push("login")
-      }
-
-      console.log("verify token error", error.message)
-    }
-
-
-  }
 
 
   const sendInfoOzon = async () => {
@@ -270,7 +242,7 @@ export default page
 
 function Card({ title, value, icon, color, valueColor }) {
   return (
-    <div className="glass rounded-2xl p-5 shadow-xl flex justify-between items-center">
+    <div className="glass backdrop-blur-xl rounded-2xl p-5 shadow-xl flex justify-between items-center">
       <div>
         <p className="text-gray-300 text-sm">{title}</p>
         <h2 className={`text-3xl font-bold ${valueColor || ""}`}> {value} </h2>

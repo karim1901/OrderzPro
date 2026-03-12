@@ -18,7 +18,8 @@ const page = () => {
         username: "",
         password: "",
         gender: "fimale",
-        commission: 10
+        commission: 10,
+        role: "employee"
     })
 
 
@@ -82,7 +83,9 @@ const page = () => {
                     username: "",
                     password: "",
                     gender: "fimale",
-                    commission: 10
+                    commission: 10,
+                    role: "employee"
+
 
                 }
             )
@@ -129,10 +132,10 @@ const page = () => {
                         <h1 className='text-center text-white font-semibold py-4'>Add Employee</h1>
 
                         <div className='flex flex-col gap-4'>
-                            <input type="text" className='glass w-full rounded-md h-[2.5rem] pl-4 outline-none text-white' placeholder='Full Name' onChange={({ target }) => { setEmployee({ ...employee, [target.name]: target.value }) }} value={employee.fullname} name="fullname" />
-                            <input type="text" className='glass w-full rounded-md h-[2.5rem] pl-4 outline-none text-white' placeholder='User Name' onChange={({ target }) => { setEmployee({ ...employee, [target.name]: target.value }) }} value={employee.username} name="username" />
-                            <input type="text" className='glass w-full rounded-md h-[2.5rem] pl-4 outline-none text-white' placeholder='Password' onChange={({ target }) => { setEmployee({ ...employee, [target.name]: target.value }) }} value={employee.password} name="password" />
-                            <input type="number" className='glass w-full rounded-md h-[2.5rem] pl-4 outline-none text-white' placeholder='Commission per delivery' onChange={({ target }) => { setEmployee({ ...employee, [target.name]: target.value >= 0 && target.value }) }} value={employee.commission >= 0 ? employee.commission : 10} name="commission" />
+                            <input type="text" className='glass backdrop-blur-xl w-full rounded-md h-[2.5rem] pl-4 outline-none text-white' placeholder='Full Name' onChange={({ target }) => { setEmployee({ ...employee, [target.name]: target.value }) }} value={employee.fullname} name="fullname" />
+                            <input type="text" className='glass backdrop-blur-xl w-full rounded-md h-[2.5rem] pl-4 outline-none text-white' placeholder='User Name' onChange={({ target }) => { setEmployee({ ...employee, [target.name]: target.value }) }} value={employee.username} name="username" />
+                            <input type="text" className='glass backdrop-blur-xl w-full rounded-md h-[2.5rem] pl-4 outline-none text-white' placeholder='Password' onChange={({ target }) => { setEmployee({ ...employee, [target.name]: target.value }) }} value={employee.password} name="password" />
+                            <input type="number" className='glass backdrop-blur-xl w-full rounded-md h-[2.5rem] pl-4 outline-none text-white' placeholder='Commission per delivery' onChange={({ target }) => { setEmployee({ ...employee, [target.name]: target.value >= 0 && target.value }) }} value={employee.commission >= 0 ? employee.commission : 10} name="commission" />
 
                             <div className='flex justify-center gap-11 '>
 

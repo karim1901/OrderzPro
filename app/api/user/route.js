@@ -12,7 +12,7 @@ export async function POST(req) {
     try {
 
 
-        const { fullname, username, email, password } = await req.json();
+        const { fullname, username, email, password,role } = await req.json();
 
         const hashedPassword = await bcrypt.hash(password, 10);
 
@@ -23,6 +23,7 @@ export async function POST(req) {
             fullname,
             username,
             email,
+            role,
             password:hashedPassword,
             verificationToken: token,
             verificationTokenExpires: Date.now() + 1000 * 60 * 60, // 1 hour

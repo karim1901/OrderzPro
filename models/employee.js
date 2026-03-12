@@ -65,7 +65,15 @@ const userSchema = new Schema({
         ref: "user", // ← اسم الموديل المرتبط
         required: true
     }
-
+    ,
+    role:{
+        type:String,
+        require:true
+    },
+    id:{
+        type:String,
+        required:true
+    }
 
 
 

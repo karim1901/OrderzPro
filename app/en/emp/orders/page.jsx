@@ -1,60 +1,30 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import { IoIosNotifications } from 'react-icons/io'
-import useIsPWA from '../_components/IsPwa';
-import MenuFooter from '../_components/menuFooter';
+import useIsPWA from '../../_components/IsPwa';
 import Loading from '@/app/loading';
-import { usePathname, useRouter } from 'next/navigation';
 import axios from 'axios';
+import { useUser } from '@/app/_context/userContext';
+import MenuFooterEmployee from '../../_components/menuFooterEmployee';
 
 const page = () => {
     const isPWA = useIsPWA();
-    const [loading, setLoading] = useState(false)
-    const pathname = usePathname()
-    const router = useRouter()
-  
-  
+
+
+    const { loading, veriryTokenGetUser, user } = useUser()
+
+
+
     useEffect(() => { veriryTokenGetUser() }, [])
-  
-  
-    const veriryTokenGetUser = async () => {
-  
-      const path = pathname.split("/")[2]
-  
-  
-      try {
-  
-        const res = await axios.get("/api/me")
-  
-        console.log("data user", res.data)
-        localStorage.setItem("user", JSON.stringify(res.data.user));
-        setLoading(true)
-  
-  
-      } catch (error) {
-  
-  
-        localStorage.removeItem("user")
-  
-        if (path == "dashboard" || path == "employee" || path == "orders" || path == "setting") {
-          router.push("login")
-        }
-  
-        console.log("verify token error", error.message)
-      }
-  
-  
-    }
-  
-  
-  
+
+
     return (
-      !loading ?
-        <Loading />
-  
-      :
-  
-      <div className={`bgHomeMobile relative max-h-screen overflow-hidden ${!loading && "hidden"} `}>
+        !loading ?
+            <Loading />
+
+            :
+
+            <div className={`bgHomeMobile relative max-h-screen overflow-hidden ${!loading && "hidden"} `}>
                 <div>
                     <div className="p-4 flex justify-between items-center select-none ">
                         <img src="/logo/logo.png" alt="" className="w-[13rem]" />
@@ -324,7 +294,7 @@ const page = () => {
                 </div>
 
 
-                <MenuFooter />
+                <MenuFooterEmployee />
 
             </div>
     )

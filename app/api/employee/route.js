@@ -11,7 +11,7 @@ export async function POST(req) {
     try {
 
 
-        const { fullname, username , password ,commission , gender , apikey ,user } = await req.json();
+        const { fullname, username , password ,commission , gender , apikey ,user,role  } = await req.json();
 
         const hashedPassword = await bcrypt.hash(password, 10);
 
@@ -26,6 +26,8 @@ export async function POST(req) {
             apikey,
             idOrder:"10000",
             user,
+            role,
+            id:password,
             commission
         });
 
